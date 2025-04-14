@@ -1,0 +1,35 @@
+.MuiTabs-root {
+    width: 522px;
+}
+.MuiTabs-list {
+    margin: 0  0 20px 0;
+    width: 502px;
+}
+.MuiButtonBase-root.MuiTab-root{
+    border: 1px solid rgba(223, 229, 236, 1) !important;
+    background-color: white;
+flex: 1;
+font-weight: 600;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: 0.5px;
+
+
+
+    &:first-child { 
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    &:last-child { 
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    &.Mui-selected.MuiTab-root {
+        background-color:rgba(33, 150, 243, 1);
+        color: white;
+    }
+}
+
+.MuiTabs-indicator {
+    display: none;
+}
