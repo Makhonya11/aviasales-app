@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'Open Sans';
   src: url('/fonts/OpenSans.woff2') format('woff2');
 
   font-style: normal;
 }
 @mixin text-style {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-weight: 600;
 }
 
