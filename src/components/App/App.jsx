@@ -6,24 +6,21 @@ import StopsFilters from '../StopsFilters/StopsFilters'
 import { getTickets, getId } from '../../utilities/AviaApiClient'
 import logo from '../../assets/Logo.png'
 
-import './App.css'
+import styles from './App.module.css'
 
 const App = () => {
-
   return (
-        <div className='body'>
-
-  <img src={logo} alt="" className='head-logo'/>
-  <aside>
-  <StopsFilters/>
-</aside>
-  <main>
-  <SortTickets/>
-<TicketList/>
-<OtherTickets/>
-</main>
-
-        </div>
+    <div className={styles.body}>
+      <img src={logo} alt="" className={styles.headLogo} />
+      <aside>
+        <StopsFilters />
+      </aside>
+      <main>
+        <SortTickets />
+        <TicketList />
+        <OtherTickets />
+      </main>
+    </div>
   )
 }
 

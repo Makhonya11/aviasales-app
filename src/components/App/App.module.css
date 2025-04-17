@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(243, 251, 253);
+}
+.body {
+  display: grid;
+  grid-template:
+    'img img' auto
+    'filters tickets' auto;
+  gap: 20px;
+}
+.headLogo {
+  grid-area: img;
+  margin: 20px auto 20px auto;
+}
+aside {
+  grid-area: filters;
+}
+main {
+  grid-area: tickets;
+}
