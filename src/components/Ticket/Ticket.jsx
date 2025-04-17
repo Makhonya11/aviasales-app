@@ -18,10 +18,16 @@ const Ticket = ({ ticketData: { price, carrier, segments } }) => {
     if (stops.length > 1) return `${stops.length} ПЕРЕСАДКИ`
     return 'БЕЗ ПЕРЕСАДОК'
   }
+  const priceFormat = (price) => {
+   price = price.toString()
+   if (price.length === 4) return (price.slice(0,1) + " " + price.slice(1))+ ' Р'
+   if (price.length === 5) return (price.slice(0,2) + " " + price.slice(2))+ ' Р'
+   return (price.slice(0,3) + " " + price.slice(3)) + ' p'
+  }
 
   return (
     <Card className={styles.ticket}>
-      <span className={styles.price}>{`${price} P`} </span>
+      <span className={styles.price}>{priceFormat(price)} </span>
       <img className={styles.logo} src={`https://pics.avs.io/99/36/${carrier}.png`} alt="" />
 
       <div className={styles.directionTo}>

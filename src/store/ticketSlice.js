@@ -44,7 +44,7 @@ export const ticketsSlice = createSlice({
       state.tickets = state.tickets.sort((a, b) =>
         a.price !== b.price
           ? a.price - b.price
-          : a.segments[0].duration + a.segments[1].duration - (b.segments[0].duration + b.segments[1].duration)
+          : (a.segments[0].duration + a.segments[1].duration) - (b.segments[0].duration + b.segments[1].duration)
       )
     },
   },
