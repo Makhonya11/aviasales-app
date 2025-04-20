@@ -11,11 +11,16 @@ const SortTickets = () => {
     <Tabs
       value={value}
       onChange={(e) => {
-        e.target.textContent === 'Самый дешевый'
-          ? (dispatch(cheapest()), dispatch(sortByPrice()))
-          : e.target.textContent === 'Самый быстрый'
-            ? (dispatch(fastest()), dispatch(sortByDuration()))
-            : (dispatch(optimal()), dispatch(sortOptimal()))
+        switch (e.target.textContent) {
+          case 'Самый дешевый':
+            return dispatch(cheapest()), dispatch(sortByPrice())
+
+          case 'Самый быстрый':
+            return dispatch(fastest()), dispatch(sortByDuration())
+
+          default:
+            return dispatch(optimal()), dispatch(sortOptimal())
+        }
       }}
       role="navigation"
     >

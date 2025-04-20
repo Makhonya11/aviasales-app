@@ -19,10 +19,10 @@ const Ticket = ({ ticketData: { price, carrier, segments } }) => {
     return 'БЕЗ ПЕРЕСАДОК'
   }
   const priceFormat = (price) => {
-   price = price.toString()
-   if (price.length === 4) return (price.slice(0,1) + " " + price.slice(1))+ ' Р'
-   if (price.length === 5) return (price.slice(0,2) + " " + price.slice(2))+ ' Р'
-   return (price.slice(0,3) + " " + price.slice(3)) + ' p'
+    price = price.toString()
+    if (price.length === 4) return price.slice(0, 1) + ' ' + price.slice(1) + ' Р'
+    if (price.length === 5) return price.slice(0, 2) + ' ' + price.slice(2) + ' Р'
+    return price.slice(0, 3) + ' ' + price.slice(3) + ' p'
   }
 
   return (
